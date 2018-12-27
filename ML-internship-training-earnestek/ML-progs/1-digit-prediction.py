@@ -24,8 +24,6 @@ model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Flatten(input_shape = (28,28)))
 
 #creating hidden layers
-model.add(tf.keras.layers.Dense(300, activation = tf.nn.relu )) #args(no. of neurons, activation function)
-#creating hidden layers
 model.add(tf.keras.layers.Dense(128, activation = tf.nn.relu )) #args(no. of neurons, activation function)
 model.add(tf.keras.layers.Dense(128, activation = tf.nn.relu ))
 model.add(tf.keras.layers.Dense(10, activation = tf.nn.softmax )) #10 neurons since there are only ten digits in total to be predicted
