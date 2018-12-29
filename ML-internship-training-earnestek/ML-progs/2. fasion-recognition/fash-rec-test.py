@@ -4,23 +4,7 @@ import numpy as np
 
 from tensorflow.keras.datasets import fashion_mnist
 
-def apparel(argmaxPred):
-    apparel_type = {
-        0: "tshirt/top",
-        1: "trouser",
-        2: "pullover",
-        3: "dress",
-        4: "coat",
-        5: "sandal",
-        6: "shirt",
-        7: "sneaker",
-        8: "bag",
-        9: "ankle boot"
-    }
-    return apparel_type.get(argmaxPred)
-
 #load the dataset
-
 (x_train, y_train) ,(x_test, y_test) = fashion_mnist.load_data()
 
 test_image_number = 50 #This value must be changed for different pictures. Value can be anything between 0 and 59999
