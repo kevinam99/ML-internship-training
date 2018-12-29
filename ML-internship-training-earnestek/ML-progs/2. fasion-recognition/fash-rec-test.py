@@ -32,5 +32,5 @@ trainedModel = tf.keras.models.load_model('fash-rec.model')
 
 predictions = trainedModel.predict(x_test)
 
-argMax = np.argmax(predictions[test_image_number])
-print(f"The apparel is a {apparel(argMax)} muthafucka.")
+apparel_type = ["tshirt/top","trouser","pullover","dress","coat","sandal","shirt", "sneaker","bag","ankle boot"]
+print(f"The apparel is a {apparel_type[np.argmax(predictions)]}")
